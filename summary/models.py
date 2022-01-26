@@ -1,20 +1,22 @@
+# from tabnanny import verbose
 from django.db import models
-from django.forms import CharField, ImageField, Textarea
+from django.db.models import CharField, ImageField, TextField
 
 # Create your models here.
 
-# class Course(models.Model):
-#     site_name = CharField(max_length=30, blank=True) # path of homepage of the site
-#     site_link = CharField(max_length=25, blank=True) # link to site homepage
-    # course_title = CharField(max_length=100) 
-#     course_link = CharField(max_length=100, blank=True) # path to the course
-#     certificate = ImageField(upload_to='certificates/', blank=True)
+class Course(models.Model):
+    site_name = CharField(max_length=30, blank=True, verbose_name='Название сайта') # path of homepage of the site
+    site_link = CharField(max_length=25, blank=True, verbose_name='Ссылка на сайт') # link to site homepage
+    course_title = CharField(max_length=100, verbose_name='Название курса') 
+    course_link = CharField(max_length=100, blank=True, verbose_name='Ссылка на курс') # path to the course
+    certificate = ImageField(upload_to='certificates/', blank=True, verbose_name='Сертификат')
+# сертификат будет отображаться на отдельной странице (по ссылке)
 
 
-# class PetProject(models.Model):
-#     # site_title = CharField(max_length=100) # name of site
-#     # use re!!
-#     site_link = CharField(max_length=50) # path of homepage of the site 
-#     note = Textarea(blank=True) # how the site works
-    # homepage_photo = ImageField(upload_to='pet-projects', blank=True)
-    # git_repository = CharField(max_length=50, blank=True)
+class PetProject(models.Model):
+    site_title = CharField(max_length=100, verbose_name='Название сайта') # site about..
+    site_link = CharField(max_length=50, verbose_name='Ссылка на сайт') # path of homepage of a site 
+    site_description = CharField(max_length=100, verbose_name='Краткое описание') # briefly decription of a site
+    note = TextField(blank=True, verbose_name='Описание сайта') # how the site works
+    homepage_photo = ImageField(upload_to='pet-projects/', blank=True, verbose_name='Фотка главной сайта')
+    git_repository = CharField(max_length=50, blank=True, verbose_name='GitHub')
