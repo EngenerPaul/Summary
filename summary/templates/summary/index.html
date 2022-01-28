@@ -8,6 +8,28 @@
 </head>
 <body>
     <h1>Hello world</h1>
-    <img src="{{ 'media/ICY-mAf5sYY.jpg' }}" alt="">
+    <img src="media/{{my_photo}}" alt="">
+    
+    <hr>
+    <h3>Курсы</h3>
+    {% for course in courses %}
+        <p>{{course}}</p>
+    {% endfor %}
+    <hr>
+
+    <h3>Пет проекты</h3>
+    {% for project in pet_projects %}
+        <p>project</p>
+    {% endfor %}
+    <hr>
+
+    <h3>Дата рождения</h3>
+    <p>{{date_of_birth}}</p>
+
+    <h3>Возраст</h3>
+    <p>{{age}}</p>
+
+    <h3>Стек</h3>
+    <p>{{stack}}</p>
 </body>
 </html>
