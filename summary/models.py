@@ -17,6 +17,7 @@ class Course(models.Model):
     class Meta:
         verbose_name = 'Course'
         verbose_name_plural = 'Courses'
+        ordering = ['id', ]
 
 class PetProject(models.Model):
     site_title = CharField(max_length=100, verbose_name='Название сайта') # site about..

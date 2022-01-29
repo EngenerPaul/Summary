@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-zgw&ghyqz*#7t4n50#915h)kk=az%9st%k4+k-8k+j$o&h25^f'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -137,10 +137,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
-
-INTERNAL_IPS = [
-    '127.0.0.1',
-]
 
 # Activate Django-Heroku.
 django_heroku.settings(locals())
