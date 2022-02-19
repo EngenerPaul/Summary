@@ -39,7 +39,7 @@
 
                 </div>
                 <div class="col">
-                    <h1 class="h3">Комарнцикий Павел Антонович ({{ age }} лет)</h1>
+                    <h1 class="h3">Комарницкий Павел Антонович ({{ age }} лет)</h1>
                     <p>
                         Python-программист / Web-разработчик<br>
                         Занятость: полная<br>
@@ -50,15 +50,18 @@
                         <div class="p">
                             Gmail: EngenerPaul.KPA@gmail.com<br>
                             Телефон: +7 982 993 81 29<br>
-                            Соц. сети: 
-                            <ul style="margin-bottom: 5px;">
-                                <li>
-                                    Вконтакте - <a href="https://vk.com/id51778539">id51778539</a>
-                                </li>
-                                <li>
-                                    Telegram - <a href="https://t.me/EngenerPaul">@EngenerPaul</a>
-                                </li>
-                            </ul>
+                            Telegram: <a href="https://t.me/EngenerPaul">@EngenerPaul</a><br>
+                            WhatsApp: <a href="https://wa.me/qr/E2VIMTVB4JIGP1">#WhatsApp Messenger</a>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#qr-code">
+                                <img src="{% static 'img/qr-code.png' %}" alt="QR-code" height="20">
+                            </a><br>
+
+                            <div class="modal" id="qr-code" tabindex="-1" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <img src="{% static 'img/qr.png' %}" alt="" height="308" width="308">
+                                </div>
+                            </div>
+
                             Github: <a href="https://github.com/EngenerPaul/">EngenerPaul/</a> 
                         </div>
                     </div>
@@ -205,7 +208,7 @@
             <hr>
             
             <h4>Дополнительная информация</h4>
-            <p style="background-color: aquamarine; margin-bottom: 0;">
+            <p style="margin-bottom: 0;">
                 Проводил обучение работе с Excel для сотрудников 
                 отдела на прежней работе
             </p>
