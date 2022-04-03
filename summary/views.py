@@ -3,7 +3,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.generic import ListView
 
-from .models import Course, PetProject
+from .models import Course, PetProject, TechnologyStack
 
 
 def my_age():
@@ -31,7 +31,8 @@ class Home(ListView):
         context['date_of_birth'] = date(year=1996, month=5, day=18)
         context['age'] = my_age()
         context['my_photo'] = 'ICY-mAf5sYY.jpg'
-        context['stack'] = ('Python 3', 'Django', 'PostgreSQL', 'GIT', 'html, css (базовый уровень)', )
+        context['stack'] = TechnologyStack.objects.all()
+        # context['stack'] = ('Python 3', 'Django', 'Django Rest Framework', 'PostgreSQL', 'GIT', 'html, css (базовый уровень)')
         return context
     
     

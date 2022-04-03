@@ -19,6 +19,7 @@ class Course(models.Model):
         verbose_name_plural = 'Courses'
         ordering = ['id', ]
 
+
 class PetProject(models.Model):
     site_title = CharField(max_length=100, verbose_name='Название сайта') # site about..
     site_link = CharField(max_length=50, verbose_name='Ссылка на сайт') # path of homepage of a site 
@@ -33,3 +34,14 @@ class PetProject(models.Model):
     class Meta:
         verbose_name = 'Pet-project'
         verbose_name_plural = 'Pet-projects'
+
+
+class TechnologyStack(models.Model):
+    tech = CharField(max_length=30)
+
+    def __str__(self):
+        return self.tech
+
+    class Meta:
+        verbose_name = 'Tech'
+        verbose_name_plural = 'Techs'

@@ -75,7 +75,7 @@
             <ul>
                 {% for tech in stack %}
                 <li>
-                    {{tech}}
+                    {{tech.tech}}
                 </li>
                 {% endfor %}
             </ul>
@@ -94,7 +94,7 @@
                             Описание: {{ project.site_description }}<br>
                         </div>
                         <div class="col-2" style="display: flex; align-items: center;">
-                            <!-- Button trigger modal -->
+                                
                             <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModal_project_{{project.pk}}">
                                 Подробнее
                             </button>
